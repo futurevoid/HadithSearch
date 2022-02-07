@@ -37,26 +37,21 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    elif message.content.startswith("0xlol") or message.content.startswith("/lol"):
-        r = requests.get(
-            'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,racist,sexist&type=single').json()
-        joke = r['joke']
-        await message.channel.send(joke)
-    elif message.content.startswith('0xtmems') or message.content.startswith('/tmems'):
+    elif message.content.startswith('lol Tmems') or message.content.startswith('/Tmems'):
          async with aiohttp.ClientSession() as cs:
                 async with cs.get('https://www.reddit.com/r/TechMemes/.json?limit=100') as r:
                  res = await r.json()
                  embed = discord.Embed(title="Tech Memes", description="Here is a tech meme", color=0x00ff00)
                  embed.set_image(url=res['data']['children'][random.randint(0,99)]['data']['url'])
                  await message.channel.send(embed=embed)
-    if message.content.startswith('0xmems') or message.content.startswith('/mems'):
+    if message.content.startswith('lol mems') or message.content.startswith('/mems'):
         async with aiohttp.ClientSession() as cs:
             async with cs.get('https://www.reddit.com/r/memes/top/.json?sort=top&t=day') as r:
                 res = await r.json()
                 embed = discord.Embed(title="Meme GIF", description="Here is a meme gif", color=0x00ff00)
                 embed.set_image(url=res['data']['children'][random.randint(0,len(res['data']['children']))]['data']['url'])
                 await message.channel.send(embed=embed)      
-    elif message.content.startswith('0xgmems') or message.content.startswith('/gmems'):
+    elif message.content.startswith('lol Gmems') or message.content.startswith('/gmems'):
         async with aiohttp.ClientSession() as cs:
             async with cs.get('https://www.reddit.com/r/gamingmemes/.json?limit=100') as r:
                 res = await r.json()
