@@ -30,21 +30,21 @@ async def on_ready():
     print('------')
 
 
-bot = commands.Bot(command_prefix='^')
+bot = commands.Bot(command_prefix='lol')
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
 
-    elif message.content.startswith('lol Tmems') or message.content.startswith('/Tmems'):
+    elif message.content.startswith('lolTmems') or message.content.startswith('/Tmems'):
          async with aiohttp.ClientSession() as cs:
                 async with cs.get('https://www.reddit.com/r/TechMemes/.json?limit=100') as r:
                  res = await r.json()
                  embed = discord.Embed(title="Tech Memes", description="Here is a tech meme", color=0x00ff00)
                  embed.set_image(url=res['data']['children'][random.randint(0,99)]['data']['url'])
                  await message.channel.send(embed=embed)
-    if message.content.startswith('lol mems') or message.content.startswith('/mems'):
+    if message.content.startswith('lolmems') or message.content.startswith('/mems'):
         async with aiohttp.ClientSession() as cs:
             async with cs.get('https://www.reddit.com/r/memes/top/.json?sort=top&t=day') as r:
                 res = await r.json()
@@ -57,4 +57,23 @@ async def on_message(message):
                 res = await r.json()
                 embed = discord.Embed(title="Gaming Memes", description="Here is a gaming meme", color=0x00ff00)
                 embed.set_image(url=res['data']['children'][random.randint(0,99)]['data']['url'])
-                await message.channel.send(embed=embed)                       
+                await message.channel.send(embed=embed)
+    elif message.content.startswith('lolWmems') or message.content.startswith('/wmems'):
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get('https://www.reddit.com/r/wholesomememes/.json?limit=100') as r:
+                res = await r.json()
+                embed = discord.Embed(title="Wholesome Memes", description="Here is a wholesome meme", color=0x00ff00)
+                embed.set_image(url=res['data']['children'][random.randint(0,99)]['data']['url'])
+                await message.channel.send(embed=embed)
+    elif message.content.startswith('lol help') or message.content.startswith('/help'):
+        embed = discord.Embed(title="Help", description="Here is a list of commands", color=0x00ff00)
+        embed.add_field(name="lolhelp", value="Displays this message", inline=False)
+        embed.add_field(name="lolmems", value="Displays a meme gif", inline=False)
+        embed.add_field(name="lolGmems", value="Displays a gaming meme", inline=False)
+        embed.add_field(name="lolWmems", value="Displays a wholesome meme", inline=False)
+        embed.add_field(name="lolTmems", value="Displays a tech meme", inline=False)
+        await message.channel.send(embed=embed)                                              
+
+
+
+
