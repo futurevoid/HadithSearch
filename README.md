@@ -1,2 +1,3 @@
-# ultramems
-a memes bot
+# Sellix
+A Shop Bot for Discord
+
