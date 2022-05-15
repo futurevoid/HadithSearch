@@ -1,5 +1,5 @@
-#hadith 
+# hadith Search
 
 hadith search by text 
 requirements:
-streamlit
+`` pip install streamlit``
