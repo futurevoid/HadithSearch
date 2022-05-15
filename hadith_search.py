@@ -13,7 +13,8 @@ remove_menu_footer = """
 <style>
 #MainMenu {visibility: hidden;}
 footer { visibility:hidden; }
-</style>"""
+</style>
+"""
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 #input = st.text_input("")
 input = st.sidebar.text_input("اكتب جزء من حديث")
