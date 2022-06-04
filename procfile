@@ -1,1 +1,1 @@
-web: streamlit run hadith_search.py
+worker: streamlit run hadith_search.py
