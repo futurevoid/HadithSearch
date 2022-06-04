@@ -3,12 +3,12 @@ import requests
 from math import *
 
 st.set_page_config(
-         page_title="Ex-stream-ly Cool App",
-     page_icon="🧊",
+         page_title="احاديث الدرر السنيه",
+     page_icon="📖",
      initial_sidebar_state="expanded"
      
  )
-title =st.title("Hadith")
+title =st.title("احاديث الدرر السنيه")
 remove_menu_footer = """
 <style>
 #MainMenu {visibility: hidden;}
@@ -32,7 +32,7 @@ for i in range(data_len):
     grade = data[number]["grade"]
     align_right_i = f"<p style='text-align:right;'>{i+1}</p>"
     st.markdown(align_right_i, unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align:right;'>{hadith}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align:right;'>الحديث:{hadith}</p>", unsafe_allow_html=True)
     align_right = f"<p style='text-align:right;'>{rawi}  |  {mohdith}  |  {source}</p>"
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>{grade}  | {numpage}  </p>",unsafe_allow_html=True)
