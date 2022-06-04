@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run hadith_search.py
+web: sh setup.sh && streamlit run app.py
