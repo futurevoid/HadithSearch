@@ -1,3 +1,4 @@
+from matplotlib.pyplot import get
 import streamlit as st
 import requests
 from math import *
@@ -18,7 +19,14 @@ footer { visibility:hidden; }
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 #input = st.text_input("")
 input = st.sidebar.text_input("اكتب حديث")
-req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}")
+pagenum = 0
+pagenum+=1
+def get_num(pagenum):
+    pagenum+=1
+    return pagenum
+    
+st.button("Search",on_click=get_num(1))
+req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
 data = req.json()
 data_len=len(data)
 for i in range(data_len):
@@ -37,7 +45,6 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>{grade}  | {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
 
