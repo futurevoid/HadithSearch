@@ -38,8 +38,6 @@ def button_hadith():
         st.markdown(align_right,unsafe_allow_html=True)
         st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
         st.markdown("<br>",unsafe_allow_html=True)
-        st.button("Search",on_click="gg")
-#input = st.text_input("")
 input = st.sidebar.text_input("اكتب حديث")
 req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}")
 data = req.json()
@@ -60,7 +58,7 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-    st.button("Search",on_click="gg")    
+st.button("Search",on_click=button_hadith())    
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
