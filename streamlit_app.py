@@ -26,7 +26,7 @@ if 'count' not in st.session_state:
 
 def button_hadith(increment_value=1):
     st.session_state.count += increment_value
-    return st.session_state.count
+
 
 # def button_hadith():
 #     pagenum = st.session_state.count
