@@ -21,7 +21,7 @@ st.markdown(remove_menu_footer, unsafe_allow_html=True)
 if "load_state" not in st.session_state:
      st.session_state.load_state = False
 
-if st.button("next") or st.session_state.load_state:
+if st.button("next") :
     st.session_state.load_state = True
     pagenum = 1
     pagenum=pagenum+1
