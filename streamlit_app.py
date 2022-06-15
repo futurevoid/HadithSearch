@@ -16,7 +16,7 @@ footer { visibility:hidden; }
 </style>
 """
 input = st.sidebar.text_input("اكتب حديث")
-inputpage = st.sidebar.text_input("الصفحة")
+inputpage = st.sidebar.number_input("الصفحه")
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 if st.button("next"):
     pagenum = inputpage
