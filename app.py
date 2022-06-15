@@ -35,7 +35,7 @@ for i in range(data_len):
     st.markdown(f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
     align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
     st.markdown(align_right,unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | {numpage}  </p>",unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
