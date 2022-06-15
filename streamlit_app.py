@@ -63,7 +63,7 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-st.button("next",on_click=hadith())    
+st.button("next",on_click=button_hadith())    
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
