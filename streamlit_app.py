@@ -18,12 +18,18 @@ footer { visibility:hidden; }
 input = st.sidebar.text_input("اكتب حديث")
 inputpage = st.sidebar.text_input("الصفحة")
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
+
 if "load_state" not in st.session_state:
      st.session_state.load_state = False
 
-if st.checkbox("next"):
-    st.session_state.load_state = True
-    pagenum = 1
+if 'count' not in st.session_state:
+    st.session_state.count = 0
+
+def increment_counter(increment_value=0):
+    st.session_state.count += increment_value
+
+def button_hadith():
+    pagenum = st.session_state.count
     pagenum=pagenum+1
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
     data = req.json()
@@ -67,7 +73,7 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-#,on_click=button_hadith())    
+st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
