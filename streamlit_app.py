@@ -15,9 +15,11 @@ remove_menu_footer = """
 footer { visibility:hidden; }
 </style>
 """
+input = st.sidebar.text_input("اكتب حديث")
+inputpage = st.sidebar.text_input("الصفحة")
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
-def button_hadith():
-    pagenum = 2
+if st.button("next"):
+    pagenum = inputpage
     pagenum=pagenum+1
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
     data = req.json()
@@ -40,7 +42,8 @@ def button_hadith():
         st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
         st.markdown("<br>",unsafe_allow_html=True)
         
-input = st.sidebar.text_input("اكتب حديث")
+
+
 req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}")
 data = req.json()
 data_len=len(data)
@@ -60,7 +63,7 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-st.button("Search",on_click=button_hadith())    
+#st.button("Search",on_click=button_hadith())    
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
