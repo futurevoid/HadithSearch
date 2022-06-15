@@ -17,10 +17,9 @@ footer { visibility:hidden; }
 """
 input = st.sidebar.text_input("اكتب حديث")
 inputpage = st.sidebar.text_input("الصفحة")
-inputpage = int(inputpage)
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 if st.button("next"):
-    pagenum = inputpage
+    pagenum = int(inputpage)
     pagenum=pagenum+1
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
     data = req.json()
