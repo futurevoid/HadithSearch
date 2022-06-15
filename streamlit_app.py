@@ -18,7 +18,7 @@ footer { visibility:hidden; }
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 def button_hadith():
     pagenum = 2
-    pagenum+=1
+    pagenum=pagenum+1
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
     data = req.json()
     data_len=len(data)
