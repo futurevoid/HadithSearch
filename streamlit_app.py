@@ -22,6 +22,7 @@ def button_hadith():
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
     data = req.json()
     data_len=len(data)
+    print(pagenum)
     for i in range(data_len):
         number = i
         hadith_uncleaned = data[number]["hadith"]
@@ -38,6 +39,7 @@ def button_hadith():
         st.markdown(align_right,unsafe_allow_html=True)
         st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
         st.markdown("<br>",unsafe_allow_html=True)
+        
 input = st.sidebar.text_input("اكتب حديث")
 req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}")
 data = req.json()
