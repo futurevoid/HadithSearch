@@ -33,29 +33,26 @@ if st.session_state.count == 0:
 
 
 
-# def button_hadith():
-#     pagenum = st.session_state.count
-#     pagenum=pagenum+1
-#     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
-#     data = req.json()
-#     data_len=len(data)
-#     print(pagenum)
-#     for i in range(data_len):
-#         number = i
-#         hadith_uncleaned = data[number]["hadith"]
-#         hadith = hadith_uncleaned.replace(".", "")
-#         source = data[number]["source"]
-#         rawi = data[number]["el_rawi"]
-#         mohdith = data[number]["el_mohdith"]
-#         numpage = data[number]["number_or_page"]
-#         grade = data[number]["grade"]
-#         align_right_i = f"<p style='text-align:right;'>{i+1}</p>"
-#         st.markdown(align_right_i, unsafe_allow_html=True)
-#         st.markdown(f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
-#         align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
-#         st.markdown(align_right,unsafe_allow_html=True)
-#         st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
-#         st.markdown("<br>",unsafe_allow_html=True)
+if input=="":
+    req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات")
+    data = req.json()
+    data_len=len(data)
+    for i in range(data_len):
+        number = i
+        hadith_uncleaned = data[number]["hadith"]
+        hadith = hadith_uncleaned.replace(".", "")
+        source = data[number]["source"]
+        rawi = data[number]["el_rawi"]
+        mohdith = data[number]["el_mohdith"]
+        numpage = data[number]["number_or_page"]
+        grade = data[number]["grade"]
+        align_right_i = f"<p style='text-align:right;'>{i+1}</p>"
+        st.markdown(align_right_i, unsafe_allow_html=True)
+        st.markdown(f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
+        align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
+        st.markdown(align_right,unsafe_allow_html=True)
+        st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
+        st.markdown("<br>",unsafe_allow_html=True)
         
 
 pagenum = st.session_state.count
