@@ -17,7 +17,7 @@ footer { visibility:hidden; }
 </style>
 """
 input = st.sidebar.text_input("اكتب حديث")
-print(input)
+inputstartingout=print(input)
 inputpage = st.sidebar.text_input("الصفحة")
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 
@@ -31,7 +31,7 @@ if st.session_state.count == 0:
     st.session_state.count = 1
     print (st.session_state.count)
 
-if st.button("next",kwargs=dict(increment_value=1)):
+if st.button("next",kwargs=dict(increment_value=1))and inputstartingout!=" ":
     increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
