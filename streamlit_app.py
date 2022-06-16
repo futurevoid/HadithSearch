@@ -27,6 +27,7 @@ st.session_state.count += 1
 
 def button_hadith(increment_value=1):
     st.session_state.count += increment_value
+    print (st.session_state.count)
 
 
 # def button_hadith():
