@@ -1,3 +1,4 @@
+from ast import increment_lineno
 import streamlit as st
 import requests
 from math import *
@@ -29,7 +30,8 @@ if st.session_state.count == 0:
     st.session_state.count = 1
     print (st.session_state.count)
 
-def button_hadith(increment_value=1):
+if st.button("next",kwargs=dict(increment_value=1)):
+    increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
 
@@ -80,7 +82,7 @@ for i in range(data_len):
     st.markdown(align_right,unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
-st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
+#st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
 #color = f"<p style='color:red;'>{source}</p>"
