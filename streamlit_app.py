@@ -81,6 +81,15 @@ if st.button("next",kwargs=dict(increment_value=1)) and inputstartingout !="":
     increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
+
+decrement_button = st.button("previous",kwargs=dict(increment_value=1))
+
+if decrement_button and inputstartingout !="":
+    increment_value = 1
+    st.session_state.count += increment_value
+    print ("def"+str(st.session_state.count))    
+
+align_left = f"<p style='text-align:left;'>{decrement_button}</p>"
 #st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
