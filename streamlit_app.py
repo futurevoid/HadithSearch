@@ -23,9 +23,11 @@ if "load_state" not in st.session_state:
      st.session_state.load_state = False
 if 'count' not in st.session_state:
     st.session_state.count =0
+    print (st.session_state.count)
 #st.session_state.count += 1
 if st.session_state.count == 0:
     st.session_state.count = 1
+    print (st.session_state.count)
 
 def button_hadith(increment_value=1):
     st.session_state.count += increment_value
