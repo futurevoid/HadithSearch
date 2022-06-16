@@ -58,6 +58,7 @@ def button_hadith(increment_value=1):
         
 
 pagenum = st.session_state.count
+print(pagenum)
 req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
 data = req.json()
 data_len=len(data)
