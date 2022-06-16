@@ -17,6 +17,7 @@ footer { visibility:hidden; }
 </style>
 """
 input = st.sidebar.text_input("اكتب حديث")
+print(input)
 inputpage = st.sidebar.text_input("الصفحة")
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 
