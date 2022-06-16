@@ -31,7 +31,7 @@ if st.session_state.count == 0:
     st.session_state.count = 1
     print (st.session_state.count)
 
-if st.button("next",kwargs=dict(increment_value=1))and inputstartingout!=" ":
+if st.button("next",kwargs=dict(increment_value=1))and inputstartingout!="":
     increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
