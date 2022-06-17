@@ -53,7 +53,7 @@ if input=="":
 
 pagenum = st.session_state.count
 print(pagenum)
-req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
+req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={st.session_state.count}")
 data = req.json()
 data_len=len(data)
 for i in range(data_len):
@@ -77,14 +77,14 @@ increment_button = st.button("next",kwargs=dict(increment_value=1),)
 
 
 if increment_button:
-    increment_value = 0
+    increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
 
 decrement_button = st.button("previous",kwargs=dict(decrement_value=1))
 
 if decrement_button :
-    decrement_value = 0
+    decrement_value = 1
     st.session_state.count -= decrement_value
     print ("def"+str(st.session_state.count))    
 
