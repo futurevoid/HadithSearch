@@ -29,6 +29,16 @@ if st.session_state.count == 0:
     st.session_state.count = 1
     print (st.session_state.count)
 
+def decrement_button():
+    decrement_value = 1
+    st.session_state.count -= decrement_value
+    print ("def"+str(st.session_state.count)) 
+
+def increment_button():
+    increment_value = 1
+    st.session_state.count += increment_value
+    print ("def"+str(st.session_state.count))
+
 
 if input=="":
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات&page={st.session_state.count}")
@@ -73,24 +83,17 @@ for i in range(data_len):
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
 
-increment_button = st.button("next",kwargs=dict(increment_value=1),)
+increment_button = st.button("next", on_click=increment_button)
+
+decrement_button = st.button("previous", on_click=decrement_button)
 
 
-if increment_button:
-    increment_value = 1
-    st.session_state.count += increment_value
-    print ("def"+str(st.session_state.count))
-
-decrement_button = st.button("previous",kwargs=dict(decrement_value=1))
-
-if decrement_button :
-    decrement_value = 1
-    st.session_state.count -= decrement_value
-    print ("def"+str(st.session_state.count))    
+       
 
 
 
-align_right = f"<div style='display: flex; align-items: flex-end;'><p>{decrement_button}</p></div>"
+align = f"<div style='display: flex; align-items: flex-end;'><p>{decrement_button}</p></div>"
+st.markdown(align,unsafe_allow_html=True)
 
 #st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
