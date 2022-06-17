@@ -89,10 +89,7 @@ if decrement_button and inputstartingout !="":
     st.session_state.count -= decrement_value
     print ("def"+str(st.session_state.count))    
 
-align_left = f"<p style='text-align:right;'>{decrement_button}</p>"
+align_left = f"<p style='text-align:left;'>{decrement_button}</p>"
 #st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
-#color = f"<p style='color:red;'>{source}</p>"
-
-#st.markdown(color,unsafe_allow_html=True)
