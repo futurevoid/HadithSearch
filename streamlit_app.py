@@ -84,17 +84,10 @@ for i in range(data_len):
     st.markdown("<br>",unsafe_allow_html=True)
 
 increment_button = st.button("next", on_click=increment_button)
-
 decrement_button = st.button("previous", on_click=decrement_button)
 
-
-       
-
-
-
-align = f"<div style='display: flex; align-items: flex-end;'><p>{decrement_button}</p></div>"
+align = f"<p style='align-items:left;'>{decrement_button}</p>"
 st.markdown(align,unsafe_allow_html=True)
-
 #st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
 
