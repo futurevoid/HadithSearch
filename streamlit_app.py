@@ -91,7 +91,7 @@ if decrement_button and inputstartingout !="":
 
 
 
-align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
+align_right = f"<p style='display: flex; align-items: flex-end;'>{decrement_button}</p>"
 
 #st.button("next",on_click=button_hadith(),kwargs=dict(increment_value=1))   
 #st.markdown(f"<p style='text-align:right;'>< button  onclick = ""  > Search  </ button ></p>",unsafe_allow_html=True)
