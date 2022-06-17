@@ -26,9 +26,9 @@ if 'count' not in st.session_state:
     st.session_state.count =0
     print (st.session_state.count)
 #st.session_state.count += 1
-if st.session_state.count == 0:
-    st.session_state.count = 1
-    print (st.session_state.count)
+#if st.session_state.count == 0:
+#    st.session_state.count = 1
+#    print (st.session_state.count)
 
 
         
