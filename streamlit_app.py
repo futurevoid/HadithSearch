@@ -77,14 +77,14 @@ for i in range(data_len):
 increment_button = st.button("next",kwargs=dict(increment_value=1),)
 
 
-if increment_button and inputstartingout !="":
+if increment_button:
     increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
 
 decrement_button = st.button("previous",kwargs=dict(decrement_value=1))
 
-if decrement_button and inputstartingout !="":
+if decrement_button :
     decrement_value = 1
     st.session_state.count -= decrement_value
     print ("def"+str(st.session_state.count))    
