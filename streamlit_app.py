@@ -72,7 +72,7 @@ if decrement_button and inputstartingout !="":
     print ("def"+str(st.session_state.count))    
 
 if input=="":
-    req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات&page={pagenum}")
+    req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات&page={1 if pagenum == 0 else pagenum}")
     data = req.json()
     data_len=len(data)
     for i in range(data_len):
