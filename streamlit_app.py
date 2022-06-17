@@ -32,7 +32,7 @@ if st.session_state.count == 0:
 
 
 if input=="":
-    req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات")
+    req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value=انما الاعمال بنيات&page={st.session_state.count}")
     data = req.json()
     data_len=len(data)
     for i in range(data_len):
