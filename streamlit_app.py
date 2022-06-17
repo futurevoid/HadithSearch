@@ -35,7 +35,7 @@ if 'count' not in st.session_state:
 
 pagenum = st.session_state.count
 print(pagenum)
-req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
+req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={1 if pagenum == 0 else pagenum}")
 data = req.json()
 data_len=len(data)
 for i in range(data_len):
