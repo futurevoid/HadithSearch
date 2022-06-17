@@ -77,7 +77,11 @@ for i in range(data_len):
     st.markdown(f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>",unsafe_allow_html=True)
     st.markdown("<br>",unsafe_allow_html=True)
 
-if st.button("next",kwargs=dict(increment_value=1)) and inputstartingout !="":
+increment_button = st.button("next",kwargs=dict(increment_value=1))
+align_left = f"<p style='text-align:left;'>{increment_button}</p>"
+st.markdown(align_left,unsafe_allow_html=True)
+
+if increment_button and inputstartingout !="":
     increment_value = 1
     st.session_state.count += increment_value
     print ("def"+str(st.session_state.count))
