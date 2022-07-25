@@ -57,7 +57,7 @@ logo = """<style>
     right:25px
     
 }
-.css-1avcm0n{
+html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 header.css-hy8qiv.e8zbici2{
     visibility:hidden;
 
 }
