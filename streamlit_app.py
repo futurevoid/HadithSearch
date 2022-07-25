@@ -66,7 +66,7 @@ if input=="":
         st.write("\n")
         st.markdown("<h5>للبحث</h5>", unsafe_allow_html=True)
         
-        definput = st.text_input("للبحث",key="definput")
+        definput = st.text_input("",key="definput")
 
 if definput!="":
     default_page.empty()
