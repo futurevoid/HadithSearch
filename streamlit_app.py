@@ -23,7 +23,7 @@ footer { visibility:hidden; }
 #    img_bytes = pathlib.Path(img_path).read_bytes()
 #    encoded = base64.b64encode(img_bytes).decode()
 #    return encoded
-#
+#font-size: 18px;
 #header_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
 #    img_to_bytes("hadith.png")
 #)
@@ -47,10 +47,15 @@ title = """
 #st.markdown(title,unsafe_allow_html=True)
 
 logo = """<style>
-#content {
+#container {
     position: relative;
-    top: -60px;
-    right: -870px;
+    
+}
+#content{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    
 }
 .css-1avcm0n{
     visibility: hidden;
@@ -58,8 +63,8 @@ logo = """<style>
 }
 </style>
 <html>
-<div id="content">
-    <div><h6>احاديث اليوم <br> ahadith</h6></div>
+<div id="container">
+    <div id=content>احاديث اليوم <br> ahadith</div>
 </div>
 </html>"""
 
