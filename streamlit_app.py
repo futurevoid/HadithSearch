@@ -1,4 +1,5 @@
-from this import d
+import base64
+import pathlib
 import streamlit as st
 import requests
 from math import *
@@ -9,7 +10,7 @@ st.set_page_config(
      initial_sidebar_state="collapsed",
  )
 
-title =st.title("احاديث الرسول ص من الدرر السنيه")
+
 
 remove_menu_footer = """
 <style>
@@ -17,6 +18,18 @@ remove_menu_footer = """
 footer { visibility:hidden; }
 </style>
 """
+
+#def img_to_bytes(img_path):
+#    img_bytes = pathlib.Path(img_path).read_bytes()
+#    encoded = base64.b64encode(img_bytes).decode()
+#    return encoded
+#
+#header_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
+#    img_to_bytes("hadith.png")
+#)
+#st.markdown(
+#    header_html, unsafe_allow_html=True,
+#)
 
 st.markdown(
      """
@@ -27,6 +40,30 @@ st.markdown(
         </style>
         """,
         unsafe_allow_html=True)
+
+title = """
+<p align=right style=vertical-align: top;>احاديث الرسول ﷺ من الدرر السنيه</p>
+"""
+#st.markdown(title,unsafe_allow_html=True)
+
+logo = """<style>
+#content {
+    position: relative;
+    top: -60px;
+    right: -870px;
+}
+.css-1avcm0n{
+    visibility: hidden;
+    
+}
+</style>
+<html>
+<div id="content">
+    <div><h6>احاديث اليوم <br> ahadith</h6></div>
+</div>
+</html>"""
+
+st.markdown(logo,unsafe_allow_html=True)
 
 input = st.sidebar.text_input("اكتب حديث")
 inputstartingout=print(input)
@@ -60,7 +97,7 @@ default_input = st.empty()
 if input=="":
     with default_page.container():    
         st.write("\n")
-        st.markdown("<h5>هذا الموقع يعرض احاديث الرسول الله صلى الله عليه و سلم\n\n <h5>(محتوى الحديث) مصنفه بالمتن\n\n</h5></h5>", unsafe_allow_html=True)
+        st.markdown("<h5>هذا الموقع يعرض احاديث الرسول الله  ﷺ\n\n <h5>(محتوى الحديث) مصنفه بالمتن\n\n</h5></h5>", unsafe_allow_html=True)
         st.markdown("<h5>و الاحاديث جميعها مصحوبه بالراوي و كتابه و رقم الحديث او الصفحه و درجة الصحه</h5>", unsafe_allow_html=True)
         st.write("\n")
         st.write("\n")
