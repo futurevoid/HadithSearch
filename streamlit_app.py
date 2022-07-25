@@ -52,19 +52,20 @@ logo = """<style>
     
 }
 #content{
-    position: absolute;
-    top: 0px;
-    right:0px;
+    position: fixed;
+    top:50px;
+    right:25px
     
 }
 .css-1avcm0n{
-    visibility: hidden;
-    
+    visibility:hidden;
+
 }
 </style>
 <html>
+<div id=content>احاديث اليوم <br> ahadith</div>
 <div id="container">
-    <div id=content>احاديث اليوم <br> ahadith</div>
+    
 </div>
 </html>"""
 
