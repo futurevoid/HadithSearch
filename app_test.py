@@ -25,6 +25,10 @@ def get_num(pagenum):
     pagenum+=1
     return pagenum
     
+st.info("""هذا الموقع يعرض احاديث الرسول الله صلى الله عليه و سلم\n
+ \n(محتوى الحديث) مصنفه بالمتن
+\n\nو الاحاديث جميعها مصحوبه بالراوي و كتابه و رقم الحديث او الصفحه و درجة الصحه
+""")    
 st.button("Search",on_click=get_num(1))
 req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={pagenum}")
 data = req.json()
