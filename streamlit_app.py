@@ -60,11 +60,11 @@ default_input = st.empty()
 if input=="":
     with default_page.container():    
         st.write("\n")
-        #st.markdown("<h5>هذا الموقع يعرض احاديث الرسول الله صلى الله عليه و سلم\n\n <h5>(محتوى الحديث) مصنفه بالمتن\n\n</h5></h5>", unsafe_allow_html=True)
-        #st.markdown("<h5>و الاحاديث جميعها مصحوبه بالراوي و كتابه و رقم الحديث او الصفحه و درجة الصحه</h5>", unsafe_allow_html=True)
-        #st.write("\n")
-        #st.write("\n")
-        #st.markdown("<h5>للبحث</h5>", unsafe_allow_html=True)
+        st.markdown("<h5>هذا الموقع يعرض احاديث الرسول الله صلى الله عليه و سلم\n\n <h5>(محتوى الحديث) مصنفه بالمتن\n\n</h5></h5>", unsafe_allow_html=True)
+        st.markdown("<h5>و الاحاديث جميعها مصحوبه بالراوي و كتابه و رقم الحديث او الصفحه و درجة الصحه</h5>", unsafe_allow_html=True)
+        st.write("\n")
+        st.write("\n")
+        st.markdown("<h5>للبحث</h5>", unsafe_allow_html=True)
         
         definput = st.text_input("للبحث",key="definput")
 
