@@ -49,6 +49,9 @@ title = """
 logo = """<style>
 #container {
     position: relative;
+    float:right
+    font-size: 80px;
+    letter-spacing: -1.6px;
     
 }
 #content{
@@ -61,15 +64,28 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
     visibility:hidden;
 
 }
+.css-1avcm0n{
+    visibility:hidden;
+}
+#intro{
+    text-align:right
+    line-height: 90px;
+
+}
+#intro2{
+    text-align:right
+    line-height: 90px;
+}
+
 </style>
 <html>
-<div id=content>احاديث اليوم <br> ahadith</div>
 <div id="container">
-    
+<div id="intro">  <h1>هذا الموقع يعرض احاديث الرسول الله  ﷺ<br> (محتوى الحديث) مصنفه بالمتن</h1></div>
+<div id="intro2">  <h1>و الاحاديث جميعها مصحوبه<br> بالراوي و المحدث و كتابه و رقم <br> الحديث او الصفحه و درجة الصحه</h1> </div>
 </div>
 </html>"""
 
-st.markdown(logo,unsafe_allow_html=True)
+#st.markdown(logo,unsafe_allow_html=True)
 
 input = st.sidebar.text_input("اكتب حديث")
 inputstartingout=print(input)
@@ -103,20 +119,16 @@ default_input = st.empty()
 if input=="":
     with default_page.container():    
         st.write("\n")
-        st.markdown("<h5>هذا الموقع يعرض احاديث الرسول الله  ﷺ\n\n <h5>(محتوى الحديث) مصنفه بالمتن\n\n</h5></h5>", unsafe_allow_html=True)
-        st.markdown("<h5>و الاحاديث جميعها مصحوبه بالراوي و كتابه و رقم الحديث او الصفحه و درجة الصحه</h5>", unsafe_allow_html=True)
         st.write("\n")
-        st.write("\n")
-        st.markdown("<h5>للبحث</h5>", unsafe_allow_html=True)
-        
-        definput = st.text_input("",key="definput")
+        st.markdown(logo,unsafe_allow_html=True)
+        #definput = st.text_input("",key="definput")
 
-if definput!="":
-    default_page.empty()
+#if definput!="":
+    #default_page.empty()
     
 
 with st.spinner("جاري التحميل"):
-    input=definput
+    #input=definput
     req = requests.get(f"https://dorar-hadith-api.herokuapp.com/api/search?value={input}&page={st.session_state.count}")
     data = req.json()
     data_len=len(data)
