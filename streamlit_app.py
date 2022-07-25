@@ -53,7 +53,7 @@ logo = """<style>
 }
 #content{
     position: fixed;
-    top:50px;
+    top:20px;
     right:25px
     
 }
