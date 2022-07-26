@@ -46,7 +46,7 @@ title = """
 """
 #st.markdown(title,unsafe_allow_html=True)
 
-logo = """<style>
+content = """<style>
 #container {
     position: relative;
     text-align: right;
@@ -88,7 +88,28 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 </div>
 </html>"""
 
-#st.markdown(logo,unsafe_allow_html=True)
+logo = """
+<style>
+#container {
+    position: relative;
+    text-align: right;
+    letter-spacing: -1.6px;
+    
+}
+
+#content{
+    position: fixed;
+    top:20px;
+    right:25px
+}
+</style>
+<html>
+<div id="container">
+<div id=content>حديثوبيديا  <br> hadithopedia</div>
+</div>
+</html>"""
+
+st.markdown(logo,unsafe_allow_html=True)
 
 input = st.sidebar.text_input("اكتب حديث")
 inputstartingout=print(input)
@@ -123,7 +144,7 @@ if input=="":
     with default_page.container():    
         st.write("\n")
         st.write("\n")
-        st.markdown(logo,unsafe_allow_html=True)
+        st.markdown(content,unsafe_allow_html=True)
         #definput = st.text_input("",key="definput")
         with st.form(key="defform"):
             input = st.text_input("ابحث عن حديث",key="definput")
