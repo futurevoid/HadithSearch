@@ -64,7 +64,7 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 
 }
 .css-1avcm0n{
-    width:91%;
+    visibility:hidden;
     
 }
 #intro{
