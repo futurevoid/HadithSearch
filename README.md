@@ -1,4 +1,4 @@
-# hadithopedia
+# hadith search
 
 hadith search by text 
 
