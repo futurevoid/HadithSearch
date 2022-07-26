@@ -126,6 +126,7 @@ if input=="":
         #definput = st.text_input("",key="definput")
         with st.form:
             input = st.text_input("",key="definput")
+            st.button("ابحث")
                     
 
 if input!="":
