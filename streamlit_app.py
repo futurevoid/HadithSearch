@@ -124,7 +124,7 @@ if input=="":
         st.write("\n")
         st.markdown(logo,unsafe_allow_html=True)
         #definput = st.text_input("",key="definput")
-        with st.form():
+        with st.form(key="defform"):
             input = st.text_input("",key="definput")
             st.button("ابحث")
                     
