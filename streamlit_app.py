@@ -115,7 +115,7 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 </style>
 <html>
 <div id="container">
-<div id=content>حديث سيرش <br> hadith search</div>
+<div id=content>حديث  سيرش <br> hadith search</div>
 </div>
 </html>"""
 
