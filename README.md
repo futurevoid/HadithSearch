@@ -10,7 +10,7 @@ hadith search by text
 
 
 This site presents the hadiths of the Messenger of God, peace and blessings be upon him
-(Content of the hadith) categorized in the text
+categorized in the text
 And all the conversations are accompanied
 With the narrator, the narrator, his book, and the number
 Hadith or page and degree of health
