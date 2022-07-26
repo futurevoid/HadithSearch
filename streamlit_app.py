@@ -49,8 +49,7 @@ title = """
 logo = """<style>
 #container {
     position: relative;
-    float:right
-    font-size: 80px;
+    
     letter-spacing: -1.6px;
     
 }
@@ -68,13 +67,17 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
     visibility:hidden;
 }
 #intro{
-    text-align:right
+    position:absolute;
+    right:0px;
     line-height: 90px;
+    padding: 10px;
+    font-size: 80px;
 
 }
 #intro2{
-    text-align:right
+    text-align:right;
     line-height: 90px;
+    font-size: 80px;
 }
 
 </style>
