@@ -102,6 +102,16 @@ logo = """
     top:20px;
     right:25px
 }
+
+html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 header.css-hy8qiv.e8zbici2{
+    visibility:hidden;
+
+}
+.css-1avcm0n{
+    visibility:hidden;
+    
+}
+
 </style>
 <html>
 <div id="container">
