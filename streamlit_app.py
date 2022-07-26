@@ -49,7 +49,7 @@ title = """
 logo = """<style>
 #container {
     position: relative;
-    
+    text-align: right;
     letter-spacing: -1.6px;
     
 }
@@ -67,10 +67,8 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
     visibility:hidden;
 }
 #intro{
-    position:absolute;
-    right:0px;
+    float:right;
     line-height: 90px;
-    padding: 10px;
     font-size: 80px;
 
 }
@@ -84,7 +82,7 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 <html>
 <div id="container">
 <div id="intro">  <h1>هذا الموقع يعرض احاديث الرسول الله  ﷺ<br>(محتوى الحديث)مصنفه بالمتن<br>و الاحاديث جميعها مصحوبه<br> بالراوي و المحدث و كتابه و رقم<br> الحديث او الصفحه و درجة الصحة</h1></div>
-<div id=content>احاديث اليوم <br> ahadith</div>
+<div id=content>حديثوبيديا  <br> hadithopedia</div>
 <!-- <div id="intro2">  <h1>و الاحاديث جميعها مصحوبه<br> بالراوي و المحدث و كتابه و رقم <br> الحديث او الصفحه و درجة الصحه</h1> </div> -->
 </div>
 </html>"""
@@ -126,9 +124,12 @@ if input=="":
         st.write("\n")
         st.markdown(logo,unsafe_allow_html=True)
         #definput = st.text_input("",key="definput")
+        with st.form:
+            input = st.text_input("",key="definput")
+                    
 
-#if definput!="":
-    #default_page.empty()
+if input!="":
+    default_page.empty()
     
 
 with st.spinner("جاري التحميل"):
