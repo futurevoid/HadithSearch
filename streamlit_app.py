@@ -100,7 +100,7 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 #root > div:nth-child(1) > div.withScreencast > div > div > header{
     visibility:hidden;
 }
- a, a:hover, a:focus, a:active {
+ a, a:hover, a:focus, a:active , a:link , a:visited {
       text-decoration: none !important;
       color: inherit;
  }
