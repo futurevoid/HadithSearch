@@ -100,10 +100,14 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 #root > div:nth-child(1) > div.withScreencast > div > div > header{
     visibility:hidden;
 }
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
 </style>
 <html>
 <div id="container">
-<div id=content>حديث  سيرش <br> hadith search</div>
+<div id=content><a href=>حديث  سيرش <br> hadith search</a></div>
 </div>
 </html>"""
 
