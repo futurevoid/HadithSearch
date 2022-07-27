@@ -1,5 +1,5 @@
-import base64
-import pathlib
+#import base64
+#import pathlib
 import streamlit as st
 import requests
 from math import *
