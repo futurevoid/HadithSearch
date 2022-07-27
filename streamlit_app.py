@@ -51,6 +51,9 @@ title = """
 #st.markdown(title,unsafe_allow_html=True)
 
 content = """<style>
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+
+
 #container {
     position: relative;
     text-align: right;
@@ -59,18 +62,15 @@ content = """<style>
 #intro{
     float:right;
     line-height: 90px;
-    font-size: 80px;
+    
 }
-#intro2{
-    text-align:right;
-    line-height: 90px;
-    font-size: 80px;
+h1{
+    font-family: 'amiri', serif;
 }
-
 </style>
 <html>
 <div id="container">
-<div id="intro">  <h1>هذا الموقع يعرض أحاديث رسول الله  ﷺ<br>(محتوى الحديث)مصنفه بالمتن<br>و الأحاديث جميعها مصحوبه<br> بالراوي و المحدث و كتابه و رقم<br> الحديث او الصفحه و درجة الصحة</h1></div>
+<div id="intro" >  <h1>هذا الموقع يعرض أحاديث رسول الله  ﷺ<br>(محتوى الحديث)مصنفه بالمتن<br>و الأحاديث جميعها مصحوبه<br> بالراوي و المحدث و كتابه و رقم<br> الحديث او الصفحه و درجة الصحة</h1></div>
 </div>
 </html>"""
 
@@ -97,7 +97,9 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
     visibility:hidden;
     
 }
-
+#root > div:nth-child(1) > div.withScreencast > div > div > header{
+    visibility:hidden;
+}
 </style>
 <html>
 <div id="container">
