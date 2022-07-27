@@ -55,14 +55,11 @@ content = """<style>
     position: relative;
     text-align: right;
     letter-spacing: -1.6px;
-    
-}
 }
 #intro{
     float:right;
     line-height: 90px;
     font-size: 80px;
-
 }
 #intro2{
     text-align:right;
