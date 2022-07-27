@@ -153,10 +153,8 @@ if input=="":
         #definput = st.text_input("",key="definput")
         with st.form(key="defform"):
             input = st.text_input("ابحث عن حديث",key="definput")
-            defsubbutton = st.form_submit_button("ابحث")
+            st.form_submit_button("ابحث")
                     
-if defsubbutton == True:
-    st.session_state.clear()
 
 if input!="":
     default_page.empty()
