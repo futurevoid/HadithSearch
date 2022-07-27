@@ -2,6 +2,8 @@
 
 hadith search by text 
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hadithsearch.herokuapp.com)
+
 هذا الموقع يعرض احاديث الرسول الله ﷺ
 (محتوى الحديث)مصنفه بالمتن
 و الاحاديث جميعها مصحوبه
