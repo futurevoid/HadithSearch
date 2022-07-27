@@ -1,6 +1,10 @@
 import base64
+from os import wait
 import pathlib
+from re import sub
+from numpy import empty
 import streamlit as st
+from streamlit import caching
 import requests
 from math import *
 
@@ -120,7 +124,14 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 
 st.markdown(logo,unsafe_allow_html=True)
 
-input = st.sidebar.text_input("اكتب حديث")
+
+with st.sidebar.form(key="sideform",clear_on_submit=True):
+        input = st.text_input("ابحث عن حديث",key="sideinput")
+        subbutton = st.form_submit_button("ابحث")
+
+if subbutton == True:
+    st.session_state.clear()
+
 inputstartingout=print(input)
 st.markdown(remove_menu_footer, unsafe_allow_html=True)
 
