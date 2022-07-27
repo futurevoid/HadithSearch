@@ -57,19 +57,6 @@ content = """<style>
     letter-spacing: -1.6px;
     
 }
-#content{
-    position: fixed;
-    top:20px;
-    right:25px
-    
-}
-html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 header.css-hy8qiv.e8zbici2{
-    visibility:hidden;
-
-}
-.css-1avcm0n{
-    visibility:hidden;
-    
 }
 #intro{
     float:right;
