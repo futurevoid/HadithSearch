@@ -115,28 +115,43 @@ with st.sidebar.form(key="sideform",clear_on_submit=True):
         subbutton = st.form_submit_button("ابحث")
         sidehide = '''
         <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();" target="_self">
-        <div id=sidebut>Results</div>
+        <img src="https://i.ibb.co/N6SS22J/gksdikjoyh-removebg-preview.png" alt="gksdikjoyh-removebg-preview" border="0">
         </a>
         '''
         sidehidecss = """<style> #stjava, #stjava:hover, #stjava:focus, #stjava:active {
         color: inherit;
         }  
         #sidebut{background: #15d798;
+        border: 2px solid #15d798;
 
         border-radius: 11px;
 
-        padding: 20px 45px;
+        padding: 18px 35px;
 
         color: #ffffff;
 
         display: inline-block;
 
-        font: normal bold 26px/1 "Open Sans", sans-serif;
-        text-align: center;
+        font: normal bold 20px/1 "Open Sans", sans-serif;
+
+        align:right;
+
+        width:30px;
+
+        height:30px;
+        
+        }
+        #rstxt{
+        font: normal bold 16px/1 "Open Sans", sans-serif;
+        position: fixed;
+        top: 262px;
+        right: 1272px
+        
         }
         </style>"""
         st.markdown(sidehide,unsafe_allow_html=True)
         st.markdown(sidehidecss,unsafe_allow_html=True)
+        #st.markdown(resultstxt,unsafe_allow_html=True)
 
 
 if subbutton == True:
