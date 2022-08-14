@@ -30,6 +30,7 @@ footer { visibility:hidden; }
 #st.markdown(
 #    header_html, unsafe_allow_html=True,
 #)
+#"text-decoration: none !important;"
 
 st.markdown(
      """
@@ -91,7 +92,7 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 }
 .css-1avcm0n{
     visibility:hidden;
-    
+   
 }
 #root > div:nth-child(1) > div.withScreencast > div > div > header{
     visibility:hidden;
@@ -107,15 +108,44 @@ html body div#root div div.withScreencast div div.stApp.css-ffhzg2.eczokvf1 head
 </div>
 </html>"""
 
+
 st.markdown(logo,unsafe_allow_html=True)
-
-
 with st.sidebar.form(key="sideform",clear_on_submit=True):
         input = st.text_input("ابحث عن حديث",key="sideinput")
         subbutton = st.form_submit_button("ابحث")
+        sidehide = '''
+        <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();" target="_self">
+        <div id=sidebut>Results</div>
+        </a>
+        '''
+        sidehidecss = """<style> #stjava, #stjava:hover, #stjava:focus, #stjava:active {
+        color: inherit;
+        }  
+        #sidebut{background: #15d798;
+
+        border-radius: 11px;
+
+        padding: 20px 45px;
+
+        color: #ffffff;
+
+        display: inline-block;
+
+        font: normal bold 26px/1 "Open Sans", sans-serif;
+        text-align: center;
+        }
+        </style>"""
+        st.markdown(sidehide,unsafe_allow_html=True)
+        st.markdown(sidehidecss,unsafe_allow_html=True)
+
 
 if subbutton == True:
     st.session_state.clear()
+    
+    
+
+
+
 
 inputstartingout=print(input)
 st.markdown(remove_menu_footer, unsafe_allow_html=True)

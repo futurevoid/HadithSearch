@@ -1,0 +1,12 @@
+import streamlit as st
+from st_bridge import bridge, html
+
+data = bridge("my-bridge", default="no button is clicked")
+
+html("""
+<button onClick="stBridges.send('my-bridge', 'alert("1")')">Button 1</button>
+<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
+<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
+""")
+
+st.write(data)
