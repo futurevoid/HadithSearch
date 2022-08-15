@@ -165,11 +165,11 @@ with st.sidebar.form(key="sideform",clear_on_submit=True):
         font-size: 14px;
         line-height: 1;
         position: absolute;
-        top: -250px;
-        right: -40px
+        top: -230px;
+        right: -30px
         }
         .css-renyox > button:nth-child(1){
-            
+            visibility:hidden;
         }
         </style>"""
         st.markdown(sidehide,unsafe_allow_html=True)
