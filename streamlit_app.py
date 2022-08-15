@@ -114,8 +114,8 @@ with st.sidebar.form(key="sideform",clear_on_submit=True):
         input = st.text_input("ابحث عن حديث",key="sideinput")
         subbutton = st.form_submit_button("ابحث")
         sidehide = '''
-        <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();" target="_self">
-        <img src="https://i.ibb.co/N6SS22J/gksdikjoyh-removebg-preview.png" alt="gksdikjoyh-removebg-preview" border="0">
+        <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();" target="_self"> 
+        <button kind="header" class="butcss"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="inherit" class="e1fb0mya1 css-fblp2m ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg></button>
         </a>
         '''
         sidehidecss = """<style> #stjava, #stjava:hover, #stjava:focus, #stjava:active {
@@ -147,6 +147,29 @@ with st.sidebar.form(key="sideform",clear_on_submit=True):
         top: 262px;
         right: 1272px
         
+        }
+        .butcss{display: inline-flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        font-weight: 400;
+        border-radius: 0.25rem;
+        margin: 0px 0.125rem;
+        color: inherit;
+        width: auto;
+        user-select: none;
+        background-color: transparent;
+        border: medium none;
+        padding: 0.5rem;
+        font-size: 14px;
+        line-height: 1;
+        position: absolute;
+        top: -250px;
+        right: -40px
+        }
+        .css-renyox > button:nth-child(1){
+            
         }
         </style>"""
         st.markdown(sidehide,unsafe_allow_html=True)
