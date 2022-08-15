@@ -165,7 +165,7 @@ with st.sidebar.form(key="sideform",clear_on_submit=True):
         font-size: 14px;
         line-height: 1;
         position: absolute;
-        top: -190px;
+        top: -200px;
         right: -30px
         }
         .css-renyox > button:nth-child(1){
