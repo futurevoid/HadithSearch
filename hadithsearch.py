@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="📖",
     initial_sidebar_state="collapsed",
 )
-
+                                                                                                                                                                                             
 
 remove_menu_footer = """
 <style>
@@ -200,17 +200,14 @@ if st.session_state.count == 0:
 def decrement_button():
     decrement_value = 1
     st.session_state.count -= decrement_value
-    print("def"+str(st.session_state.count))
 
 
 def increment_button():
     increment_value = 1
     st.session_state.count += increment_value
-    print("def"+str(st.session_state.count))
 
 
 default_page = st.empty()
-print(input)
 if input == "":
     with default_page.container():
         st.write("\n")
@@ -223,33 +220,31 @@ if input == "":
 
 if input != "":
     default_page.empty()
+    with st.spinner("جاري التحميل"):
+        req = requests.get(
+            f"https://dorar-hadith-api.cyclic.app/api/search?value={input}&page={st.session_state.count}")
 
+        data = req.json()
+        data_len = len(data)
 
-with st.spinner("جاري التحميل"):
-    req = requests.get(
-        f"https://dorar-hadith-api.cyclic.app/api/search?value={input}&page={st.session_state.count}")
+        for number in range(data_len):
+            hadith_uncleaned = data[number]["hadith"]
+            hadith = hadith_uncleaned.replace(".", "")
+            source = data[number]["source"]
+            rawi = data[number]["el_rawi"]
+            mohdith = data[number]["el_mohdith"]
+            numpage = data[number]["number_or_page"]
+            grade = data[number]["grade"]
+            space = "\n"
+            st.markdown(
+                f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
 
-    data = req.json()
-    data_len = len(data)
+            align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
 
-    for number in range(data_len):
-        hadith_uncleaned = data[number]["hadith"]
-        hadith = hadith_uncleaned.replace(".", "")
-        source = data[number]["source"]
-        rawi = data[number]["el_rawi"]
-        mohdith = data[number]["el_mohdith"]
-        numpage = data[number]["number_or_page"]
-        grade = data[number]["grade"]
-        space = "\n"
-        st.markdown(
-            f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
-
-        align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
-
-        st.markdown(align_right, unsafe_allow_html=True)
-        st.markdown(
-            f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>", unsafe_allow_html=True)
-        st.markdown("<br>", unsafe_allow_html=True)
-    if input != "":
-        increment_button = st.button("next", on_click=increment_button)
-        decrement_button = st.button("previous", on_click=decrement_button)
+            st.markdown(align_right, unsafe_allow_html=True)
+            st.markdown(
+                f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>", unsafe_allow_html=True)
+            st.markdown("<br>", unsafe_allow_html=True)
+        if input != "":
+            increment_button = st.button("next", on_click=increment_button)
+            decrement_button = st.button("previous", on_click=decrement_button)
