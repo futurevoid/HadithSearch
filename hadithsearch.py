@@ -116,7 +116,7 @@ with st.sidebar.form(key="sideform", clear_on_submit=True):
     input = st.text_input("ابحث عن حديث", key="sideinput")
     subbutton = st.form_submit_button("ابحث")
     sidehide = '''
-        <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();alert(window.navigator.userAgent);" target="_self"> 
+        <a id=stjava href="javascript:document.getElementsByClassName('css-1rs6os edgvbvh3')[1].click();" target="_self"> 
         <button kind="header" class="butcss"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="inherit" class="e1fb0mya1 css-fblp2m ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg></button>
         </a>
         '''
