@@ -4,7 +4,6 @@
 import streamlit as st
 import requests
 from math import *
-import js2py
 
 
 st.set_page_config(
