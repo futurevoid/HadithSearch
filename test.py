@@ -1,12 +1,7 @@
-import streamlit as st
-from st_bridge import bridge, html
+from selenium import webdriver
+import webbrowser
 
-data = bridge("my-bridge", default="no button is clicked")
-
-html("""
-<button onClick="stBridges.send('my-bridge', 'alert("1")')">Button 1</button>
-<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
-<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
-""")
-
-st.write(data)
+driver = webdriver.Firefox()
+driver.get("https://hadithsearch.herokuapp.com/")
+button = driver.find_element_by_class_name("css-1rs6os edgvbvh3")
+button.click()
