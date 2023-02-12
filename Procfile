@@ -1,2 +1,1 @@
-web: index.html
-web: sh setup.sh && streamlit run hadithsearch.py
+web: sh setup.sh && streamlit run hadithsearch.py && php -f index.php
