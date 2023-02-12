@@ -45,6 +45,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 title = """
+<head><meta name="google-site-verification" content="_25DA7K8Pj_ZUYAhNOvtMPyIy_P4A4GbBpUj0BvRNWM" /></head>
 <p align=right style=vertical-align: top;>احاديث الرسول ﷺ من الدرر السنيه</p>
 """
 
