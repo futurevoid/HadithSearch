@@ -5,6 +5,9 @@ import streamlit as st
 import requests
 from math import *
 
+
+st.header(""" <meta name="google-site-verification" content="_25DA7K8Pj_ZUYAhNOvtMPyIy_P4A4GbBpUj0BvRNWM"/>""")
+
 st.markdown("""
             <!DOCTYPE html>
             <head>
