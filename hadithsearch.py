@@ -11,7 +11,7 @@ st.markdown("""
             <meta name="google-site-verification" content="_25DA7K8Pj_ZUYAhNOvtMPyIy_P4A4GbBpUj0BvRNWM"/>
             <meta name = "description"; charset=utf-8 content = "هذا الموقع يعرض أحاديث رسول الله  ﷺ(محتوى الحديث)مصنفه بالمتن و الأحاديث جميعها مصحوبه بالراوي و المحدث و كتابه و رقم الحديث او الصفحه و درجة الصحة     This website presents the speeches of the Messenger of Allah PBUH (hadith Content), classified as hard and all talks accompanied by the narrator, updated, book, talk number or page and degree of health">
             </head>
-            </html>
+            
             """, unsafe_allow_html=True)
 
 #st.set_page_config(
