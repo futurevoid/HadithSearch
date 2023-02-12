@@ -7,7 +7,7 @@ from math import *
 
 
 st.set_page_config(
-    page_title="احاديث الدرر السنيه",
+    page_title="احاديث الدرر السنيه hadithsearch" ,
     page_icon="📖",
     initial_sidebar_state="collapsed",
 )
