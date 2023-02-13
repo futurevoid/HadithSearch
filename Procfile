@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-nginx && sh setup.sh && streamlit run hadithsearch.py 
+web: sh setup.sh && streamlit run hadithsearch.py && vendor/bin/heroku-php-nginx
