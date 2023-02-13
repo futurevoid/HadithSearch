@@ -1,5 +1,5 @@
 {
-    "name": "collegestuff.github.io",
+    "name": "HadithSearch",
       "version": "1.0.0",
      "description": "",
      "scripts": {
@@ -8,12 +8,12 @@
          "start": "node index.js"
       },
       "repository": {        "type": "git",
-          "url": "git+https://github.com/futurevoid/collegestuff.github.io.git"
+          "url": "git+https://github.com/futurevoid/HadithSearch.git"
       },
       "author": "",
       "license": "ISC",
       "bugs": {
-          "url": "https://github.com/futurevoid/collegestuff.github.io/issues"
+          "url": "https://github.com/futurevoid/HadithSearch/issues"
       },
-      "homepage": "https://github.com/futurevoid/collegestuff.github.io#readme"
+      "homepage": "https://github.com/futurevoid/HadithSearch#readme"
   }
