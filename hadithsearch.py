@@ -224,28 +224,30 @@ if input != "":
     default_page.empty()
     with st.spinner("جاري التحميل"):
         req = requests.get(
-            f"https://dorar-hadith-api.cyclic.app/v1/api/search?value={input}&page={st.session_state.count}")
+            f"https://dorar-hadith-api.cyclic.app/v1/api/hadith/search?value={input}&page={st.session_state.count}")
 
-        data = req.json()
+        res = req.json()
+        data = res["data"]
+
         data_len = len(data)
 
         for number in range(data_len):
             hadith_uncleaned = data[number]["hadith"]
             hadith = hadith_uncleaned.replace(".", "")
-            source = data[number]["source"]
-            rawi = data[number]["el_rawi"]
-            mohdith = data[number]["el_mohdith"]
-            numpage = data[number]["number_or_page"]
+            book = data[number]["book"]
+            rawi = data[number]["rawi"]
+            mohdith = data[number]["mohdith"]
+            numpage = data[number]["numberOrPage"]
             grade = data[number]["grade"]
             space = "\n"
             st.markdown(
                 f"<p style='text-align:right;'>الحديث: {hadith}</p>", unsafe_allow_html=True)
 
-            align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |المصدر: {source}</p>"
+            align_right = f"<p style='text-align:right;'>الراوي: {rawi}  |المحدث: {mohdith}  |الكتاب: {book}</p>"
 
             st.markdown(align_right, unsafe_allow_html=True)
             st.markdown(
-                f"<p style='text-align:right;'>خلاصة حكم الحديث: {grade}  | الصفحة أو الرقم: {numpage}  </p>", unsafe_allow_html=True)
+                f"<p style='text-align:right;'>خلاصة حكم المحدث: {grade}  | الصفحة أو الرقم: {numpage}  </p>", unsafe_allow_html=True)
             st.markdown("<br>", unsafe_allow_html=True)
         if input != "":
             increment_button = st.button("next", on_click=increment_button)
