@@ -224,7 +224,7 @@ if input != "":
     default_page.empty()
     with st.spinner("جاري التحميل"):
         req = requests.get(
-            f"https://dorar-hadith-api.cyclic.app/api/search?value={input}&page={st.session_state.count}")
+            f"https://dorar-hadith-api.cyclic.app/v1/api/search?value={input}&page={st.session_state.count}")
 
         data = req.json()
         data_len = len(data)
